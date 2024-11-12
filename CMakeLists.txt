@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 project(ORB_SLAM3)
-
+# ladaoba
 if(NOT CMAKE_BUILD_TYPE)
         set(CMAKE_BUILD_TYPE Release)
 endif()
