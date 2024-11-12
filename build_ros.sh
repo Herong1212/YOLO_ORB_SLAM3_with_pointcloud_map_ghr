@@ -7,3 +7,5 @@ cd build
 cmake .. -DROS_BUILD_TYPE=Release
 # make -j2
 make -j
+
+# 拉倒吧
