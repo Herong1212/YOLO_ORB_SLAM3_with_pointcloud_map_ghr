@@ -22,7 +22,7 @@ if(COMPILER_SUPPORTS_CXX17)
         # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
         add_definitions(-DCOMPILEDWITHC14)
-        message(STATUS "Using flag -std=c++14.")
+        message(STATUS "Using flag -std=c++17.")
 elseif(COMPILER_SUPPORTS_CXX11)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
         add_definitions(-DCOMPILEDWITHC11)
@@ -41,10 +41,6 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 set(CMAKE_PREFIX_PATH ${PROJECT_SOURCE_DIR}/Thirdparty/libtorch)
 
 find_package(OpenCV REQUIRED)
-if(NOT OpenCV_FOUND)
-        message(FATAL_ERROR "OpenCV > 4.2 not found.")
-endif()
-
 message("OPENCV VERSION:")
 message(${OpenCV_VERSION})
 
@@ -172,7 +168,6 @@ if(realsense2_FOUND)
                 Examples/RGB-D/rgbd_realsense_D435i.cc)
         target_link_libraries(rgbd_realsense_D435i ${PROJECT_NAME})
 endif()
-
 
 # RGB-D inertial examples
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/RGB-D-Inertial)
