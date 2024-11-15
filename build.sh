@@ -50,5 +50,5 @@ mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 # make rgbd_tum -j4
-make -j
+make -j4
 echo "Configuring and building done!"

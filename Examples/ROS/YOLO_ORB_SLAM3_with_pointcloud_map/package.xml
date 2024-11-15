@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>orb_slam3_ros</name>
+    <version>1.0.0</version>
+    <description>ORB_SLAM3 package for ROS Noetic</description>
+
+    <author>Carlos Campos, Richard Elvira, Juan J. Gomez, Jose M.M. Montiel, Juan D. Tardos</author>
+
+    <maintainer email="ghrr1212666@gmail.com">Herong1212</maintainer>
+
+    <license>GPLv3</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <depend>roscpp</depend>
+    <depend>std_msgs</depend>
+    <depend>sensor_msgs</depend>
+    <depend>image_transport</depend>
+    <depend>cv_bridge</depend>
+    <depend>tf</depend>
+    <!-- 添加其他依赖项 -->
+
+    <export>
+        <!-- Catkin/ROS发布需要的内容 -->
+    </export>
+
+    <!--1、构建时需要的依赖 -->
+    <build_depend>
+        <!-- some_library -->
+    </build_depend>
+
+    <!--2、运行时需要的依赖-->
+    <exec_depend>
+        <!-- another_library -->
+    </exec_depend>
+
+    <!--3、测试时需要的依赖 -->
+    <test_depend>
+        <!-- gtest -->
+    </test_depend>
+</package>

@@ -25,7 +25,7 @@
 #include <Eigen/Core>
 #include <Eigen/Geometry>
 #include <Eigen/Dense>
-#include <sophus/se3.hpp>
+#include <sophus/se3.hpp> // !编译的时候这里报错，因为把 CMakeLists.txt 里注释掉了，导致同时使用了系统里的 Sophus 和 Thirdparty 里的 Sophus，但是项目中只能使用一个版本的 Sophus！
 #include <mutex>
 
 #include "SerializationUtils.h"
